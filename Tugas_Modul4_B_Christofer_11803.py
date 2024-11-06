@@ -44,6 +44,7 @@ uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["cs
 if uploaded_file is not None:
     input_data = pd.read_csv(uploaded_file)
     st.markdown("<h1 style='text-align: center;'>Unsupervised Learning - 11803</h1>", unsafe_allow_html=True)
+    st.dataframe(input_data)
     
     model_path = {
         "AGG_model" : r'AGG_model.pkl',
